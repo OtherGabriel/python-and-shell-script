@@ -19,7 +19,7 @@ def sendEmail (send_from, send_to, send_subject, send_message, image_embebed_pat
     smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465)
     smtp.login(send_from["email"], send_from["password"])
   except:
-    print("\nErro na autenticação do usuário.")
+    print("\nAutentication error.")
 
     return
 
@@ -40,7 +40,7 @@ def sendEmail (send_from, send_to, send_subject, send_message, image_embebed_pat
 
       message.attach(embebed_image)
     except:
-      print("Caminho da imagem a ser incorporada no e-mail não encontrado.")
+      print("Path not found (embebed image).")
 
   # Document verification - Add document? -> Document exist?
   if document_path != "":
@@ -55,7 +55,7 @@ def sendEmail (send_from, send_to, send_subject, send_message, image_embebed_pat
       document.add_header('Content-Decomposition', 'attachment', filename=document_path)
       message.attach(document)
     else:
-      print("Caminho do documento não encontrado.")
+      print("Path not found (document).")
 
   # Image verification - Add image? -> Image exist?
   if image_path != "":
@@ -65,7 +65,7 @@ def sendEmail (send_from, send_to, send_subject, send_message, image_embebed_pat
       image = MIMEImage(image_data, name=os.path.basename(image_path))
       message.attach(image)
     else:
-      print("Caminho da imagem não encontrado.")
+      print("Path not found (image).")
 
   # Add text.
   message.attach(send_message)
@@ -75,7 +75,7 @@ def sendEmail (send_from, send_to, send_subject, send_message, image_embebed_pat
     smtp.sendmail(send_from["email"], send_to, message.as_string())
     smtp.quit()
   except:
-    print("Erro no envio da mensagem")
+    print("Message not sent.")
 
   # Confirmation message.
-  print("E-mail enviado com sucesso.")
+  print("Success in sent mail.")

@@ -5,5 +5,5 @@ PASSWORD = "your-email-password"
 
 # Messages
 
-EMAIL_TITLE = "Your message title"
-EMAIL_BODY = "Your email body"
+EMAIL_TITLE = "Your mail title"
+EMAIL_BODY = "Your mail body"

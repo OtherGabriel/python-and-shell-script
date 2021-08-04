@@ -19,7 +19,7 @@ all_texts = [ email_title, email_body ]
 # Email configuration.
 
 send_from = { "email": constants.EMAIL, "password": constants.PASSWORD }
-send_to = [ "other-mail@your-domain" ]
+send_to = [ "other-email@your-domain" ]
 subject = "Your email subject"
 
 builded_message = buildMessage(texts = all_texts, format = "html")
