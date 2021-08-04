@@ -1,6 +1,5 @@
 # HTML Helper.
 
-# Método para transformar o texto em HTML.
+# Text to HTML.
 
-def htmlTransform (tag, content): 
-  return "<" + tag + ">" + content + "</" + tag + ">"
+def htmlTransform (tag, content): return "<" + tag + ">" + content + "</" + tag + ">"

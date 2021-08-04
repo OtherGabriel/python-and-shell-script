@@ -1,7 +1,7 @@
 # Aux messages and strings
 
-EMAIL = "servidorcedeca.ce@gmail.com"
-PASSWORD = "@AdmCedeca!2020"
+EMAIL = "your-email@your-domain.com"
+PASSWORD = "your-email-password"
 
 # Messages
 

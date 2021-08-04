@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email import encoders
 
-# Métodos para formação de mensagens ou campos.
+# Formation message.
 
 def buildMessage (texts, format="text"):
   if format == "text":
